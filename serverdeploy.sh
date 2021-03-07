@@ -106,6 +106,7 @@ esac
 # Inspiration came from https://forum.vestacp.com/viewtopic.php?t=17129
 echo "Entering Phase 3, PHP Versions"
 apt-get update
+apt-get -y remove postfix*
 apt-get -y install apt-transport-https ca-certificates
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 sh -c 'echo "deb https://packages.sury.org/php/ stretch main" > /etc/apt/sources.list.d/php.list'
